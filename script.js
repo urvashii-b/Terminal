@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
         "help": () => {
             return `
                 <span style="color:${themeColors.textColor};">about</span>          - learn more about me <br>
-                <span style="color:${themeColors.textColor};">portfolio</span>      - view my website <br>
                 <span style="color:${themeColors.textColor};">clear</span>          - clear the terminal display <br>
                 <span style="color:${themeColors.textColor};">echo</span>           - display custom text or messages <br>
                 <span style="color:${themeColors.textColor};">education</span>      - explore my academic journey <br>
@@ -21,13 +20,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span style="color:${themeColors.textColor};">exit</span>           - close the current session <br>
                 <span style="color:${themeColors.textColor};">help</span>           - get a list of available commands <br>
                 <span style="color:${themeColors.textColor};">history</span>        - see your command usage history <br>
+                <span style="color:${themeColors.textColor};">portfolio</span>      - view my website <br>
                 <span style="color:${themeColors.textColor};">projects</span>       - check out my projects <br>
                 <span style="color:${themeColors.textColor};">pwd</span>            - show the current working directory <br>
-                <span style="color:${themeColors.textColor};">resume</span>         - download my professional resume <br>
                 <span style="color:${themeColors.textColor};">skills</span>         - view my skill set <br>
                 <span style="color:${themeColors.textColor};">socials</span>        - discover my social media profiles <br>
                 <span style="color:${themeColors.textColor};">themes</span>         - browse through available themes <br>
                 <span style="color:${themeColors.textColor};">welcome</span>        - view the introductory section <br>
+                <span style="color:${themeColors.textColor};">work</span>           - view my relevant experience <br>
                 <span style="color:${themeColors.textColor};">whoami</span>         - find out who the current user is <br>
             `;
         },
@@ -86,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
         "skills": "I am a fast learner and highly motivated individual. <hr> <span style='color:"+themeColors.textColor+";'>Languages</span>: C++, Python, JavaScript, Svelte, React <br><span style='color:"+themeColors.textColor+";'>Tools</span>: Docker, Kubernetes, Git, Framer, Webflow <br><span style='color:"+themeColors.textColor+";'>Database Technologies</span>: MySQL, MongoDB, Neo4j <br><span style='color:"+themeColors.textColor+";'>Strengths</span>: DSA, Frontend Development, UI/UX Design, Generative AI <br><span style='color:"+themeColors.textColor+";'>Soft Skills</span>: Leadership, Team work, Communication, Time Management",
         "socials": "Connect with me on LinkedIn, GitHub, Twitter, etc.",
         "welcome": "Hey There! I am Urvashi Bhargava, Senior at PES University, India. <br> An aspiring computer science student with strong interest in coding and frontend development. <br> Won hackathons, published in an international conference and built a company's website.",
+        "work": () => {
+            window.open("https://hydammonia.com/", "_blank");
+            return 'Full Stack Developer @ HACPL';
+        },
         "whoami": "guest@user. But you should know who you are!",
     };
 
