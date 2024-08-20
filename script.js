@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span style="color:${themeColors.textColor};">whoami</span>         - find out who the current user is <br>
             `;
         },
-        "themes": `Available themes: <br>ubuntu<br>git-bash<br>sunset<br>sweet<br><br>To change themes, type 'themes go to <theme-name>'.`,
+        "themes": `Available themes: <br>ubuntu<br>git-bash<br>sunset<br>sweet<br><br>To change themes, type 'themes go to "theme-name"'.<br>Example: themes go to sunset`,
         "themes go to ubuntu": () => {
             terminal.style.backgroundColor = '#300a24';
             terminalHeader.style.backgroundColor = '#595959';
@@ -42,28 +42,28 @@ document.addEventListener("DOMContentLoaded", function() {
         },
 
         "themes go to git-bash": () => {
-            terminal.style.background = 'linear-gradient(135deg, #1a1a1a, #2e2e2e)'; // Dark gray gradient
-            terminalHeader.style.background = 'linear-gradient(135deg, #2e2e2e, #444444)'; // Slightly lighter dark gray gradient
-            terminalHeader.style.color = '#00ff00'; // Bright green header text
-            terminalBody.style.color = '#00ff00'; // Bright green body text
+            terminal.style.background = 'linear-gradient(135deg, #1a1a1a, #2e2e2e)'; 
+            terminalHeader.style.background = 'linear-gradient(135deg, #2e2e2e, #444444)';
+            terminalHeader.style.color = '#00ff00'; 
+            terminalBody.style.color = '#00ff00'; 
             themeColors.textColor = '#00ff00';
             return "Switched to Git-Bash theme!";
         },
 
         "themes go to sunset": () => {
-            terminal.style.background = 'linear-gradient(in oklab, #ffff00, red)'; // Coral to orange-red gradient
-            terminalHeader.style.background = 'linear-gradient(135deg, #ff7f50, #ff4500)'; // Orange-red to tomato gradient
-            terminalHeader.style.color = '#ffffff'; // White header text
-            terminalBody.style.color = '#fffb00'; // Light golden body text
+            terminal.style.background = 'linear-gradient(in oklab, #ffff00, red)'; 
+            terminalHeader.style.background = 'linear-gradient(135deg, #ff7f50, #ff4500)'; 
+            terminalHeader.style.color = '#ffffff'; 
+            terminalBody.style.color = '#fffb00'; 
             themeColors.textColor = '#fffb00';
             return "Switched to Sunset theme!";
         },
 
         "themes go to sweet": () => {
-            terminal.style.background = 'linear-gradient(135deg, #ffb6c1, #ff69b4)'; // Medium pink to light pink gradient
-            terminalHeader.style.background = 'linear-gradient(135deg, #ffd9df, #ff69b4)'; // Light pink to medium pink gradient
-            terminalHeader.style.color = '#ff178b'; // Deep pink header text
-            terminalBody.style.color = '#ff178b'; // Dark pink text color for body
+            terminal.style.background = 'linear-gradient(135deg, #ffb6c1, #ff69b4)'; 
+            terminalHeader.style.background = 'linear-gradient(135deg, #ffd9df, #ff69b4)'; 
+            terminalHeader.style.color = '#ff178b'; 
+            terminalBody.style.color = '#ff178b'; 
             themeColors.textColor = '#ff0f9f';
             return "Switched to Sweet theme!";
         },
@@ -74,7 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 
         "clear": () => { terminalBody.innerHTML = ''; return ''; },
         "echo": (args) => args.join(" "),
-        "education": "<span style='color:"+themeColors.textColor+";'>PES University</span> | 2021 - 2025 <br> <span style='color:"+themeColors.textColor+";'>FIITJEE</span> | 2019 - 2021 <br><span style='color:"+themeColors.textColor+";'> Delhi Public School</span> | 2016 - 2019",
+        "education": () => {
+            return `<span style="color:${themeColors.textColor};">PES University</span> | 2021 - 2025 <br><span style="color:${themeColors.textColor};">FIITJEE</span> | 2019 - 2021 <br><span style="color:${themeColors.textColor};">Delhi Public School</span> | 2016 - 2019`
+        },
         "email": () => {
             window.open("mailto:urvashi.officialcse@gmail.com");
             return 'You can reach me at: urvashi.officialcse@gmail.com';
@@ -83,8 +85,9 @@ document.addEventListener("DOMContentLoaded", function() {
         "history": () => commandHistory.join("<br>"),
         "projects": "You can visit my portfolio website / github to see all my projects <hr> These are my personal favorites: <br>1. CounselAI - LLM Career Counselor<br> <img src='/images/counselai.png' style='width:75%; height:auto;'><br>2. ArBotique - AR/AI Fashion Store<br><img src='/images/arbotique.png' style='width:75%; height:auto;'><br>3. Mediwise - Smart Inventory Management System<br><img src='/images/mediwise.png' style='width:75%; height: auto;'>"
         ,"pwd": "You are currently in the root directory.",
-        "skills": "I am a fast learner and highly motivated individual. <hr> <span style='color:"+themeColors.textColor+";'>Languages</span>: C++, Python, JavaScript, Svelte, React <br><span style='color:"+themeColors.textColor+";'>Tools</span>: Docker, Kubernetes, Git, Framer, Webflow <br><span style='color:"+themeColors.textColor+";'>Database Technologies</span>: MySQL, MongoDB, Neo4j <br><span style='color:"+themeColors.textColor+";'>Strengths</span>: DSA, Frontend Development, UI/UX Design, Generative AI <br><span style='color:"+themeColors.textColor+";'>Soft Skills</span>: Leadership, Team work, Communication, Time Management",
-        "socials": "Connect with me on LinkedIn, GitHub, Twitter, etc.",
+        "skills": () => {
+            return `I am a fast learner and highly motivated individual. <hr> <span style="color:${themeColors.textColor};">Languages</span>: C++, Python, JavaScript, Svelte, React <br><span style="color:${themeColors.textColor};">Tools</span>: Docker, Kubernetes, Git, Framer, Webflow <br><span style="color:${themeColors.textColor};">Database Technologies</span>: MySQL, MongoDB, Neo4j <br><span style="color:${themeColors.textColor};">Strengths</span>: DSA, Frontend Development, UI/UX Design, Generative AI <br><span style="color:${themeColors.textColor};">Soft Skills</span>: Leadership, Team work, Communication, Time Management`},
+        "socials": "Connect with me on <br>1. LinkedIn: https://www.linkedin.com/in/urvashi-bhargava-b66100262/,<br>2. GitHub: https://github.com/urvashii-b,<br>3. Twitter: https://x.com/urvashiicodes",
         "welcome": "Hey There! I am Urvashi Bhargava, Senior at PES University, India. <br> An aspiring computer science student with strong interest in coding and frontend development. <br> Won hackathons, published in an international conference and built a company's website.",
         "work": () => {
             window.open("https://hydammonia.com/", "_blank");
@@ -129,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const response = processCommand(input);
                     if (response) {
                         const responseElement = document.createElement("p");
-                        responseElement.style.color = 'white';  // Update command output color
+                        responseElement.style.color = 'white'; 
                         responseElement.innerHTML = response;
                         terminalBody.appendChild(responseElement);
                     }
